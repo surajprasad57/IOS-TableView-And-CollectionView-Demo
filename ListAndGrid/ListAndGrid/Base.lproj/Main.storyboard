@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ListAndGrid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8CT-y8-Jhc">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="738" id="X1y-Gq-1el"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="d30-1X-Fz7">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xe0-xy-rKr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgx-aC-XCr">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="GridView">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="GridViewClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVV-UQ-KQa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZc-yh-CAO">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="80"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="207" id="x2J-pS-q1b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="ListView">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ListViewClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8o-Mi-RQE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SZc-yh-CAO" firstAttribute="top" secondItem="zgx-aC-XCr" secondAttribute="top" id="7cO-z3-H6e"/>
+                                    <constraint firstItem="SZc-yh-CAO" firstAttribute="top" secondItem="xe0-xy-rKr" secondAttribute="top" id="7eC-Vr-RJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="zgx-aC-XCr" secondAttribute="trailing" id="J8o-0Q-BDu"/>
+                                    <constraint firstItem="zgx-aC-XCr" firstAttribute="leading" secondItem="SZc-yh-CAO" secondAttribute="trailing" id="Zc9-gM-hgh"/>
+                                    <constraint firstItem="SZc-yh-CAO" firstAttribute="leading" secondItem="xe0-xy-rKr" secondAttribute="leading" id="aoH-cS-iKj"/>
+                                    <constraint firstItem="SZc-yh-CAO" firstAttribute="baseline" secondItem="zgx-aC-XCr" secondAttribute="firstBaseline" id="eUh-1l-9ZO"/>
+                                    <constraint firstAttribute="bottom" secondItem="SZc-yh-CAO" secondAttribute="bottom" id="ieM-u6-GgD"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4V-IV-o0J">
+                                <rect key="frame" x="0.0" y="124" width="414" height="738"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="738" id="ptq-T7-QAK"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w4V-IV-o0J" firstAttribute="top" secondItem="xe0-xy-rKr" secondAttribute="bottom" id="0Pf-q3-Av4"/>
+                            <constraint firstItem="xe0-xy-rKr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9ir-2s-obP"/>
+                            <constraint firstItem="8CT-y8-Jhc" firstAttribute="leading" secondItem="w4V-IV-o0J" secondAttribute="leading" id="JY5-ia-WAG"/>
+                            <constraint firstItem="xe0-xy-rKr" firstAttribute="leading" secondItem="8CT-y8-Jhc" secondAttribute="leading" id="NWA-c8-7Im"/>
+                            <constraint firstItem="8CT-y8-Jhc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Y8u-6F-Nmu"/>
+                            <constraint firstItem="8CT-y8-Jhc" firstAttribute="trailing" secondItem="w4V-IV-o0J" secondAttribute="trailing" id="dn8-z7-NBf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4V-IV-o0J" secondAttribute="bottom" id="egq-7C-40b"/>
+                            <constraint firstAttribute="trailing" secondItem="xe0-xy-rKr" secondAttribute="trailing" id="kdI-L8-dHP"/>
+                            <constraint firstItem="xe0-xy-rKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sDT-eG-rzt"/>
+                            <constraint firstItem="xe0-xy-rKr" firstAttribute="trailing" secondItem="8CT-y8-Jhc" secondAttribute="trailing" id="wBF-D9-jOx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8CT-y8-Jhc" id="u2D-eq-HCt"/>
+                        <outlet property="gridView" destination="zgx-aC-XCr" id="2bt-L8-bC9"/>
+                        <outlet property="listView" destination="SZc-yh-CAO" id="23j-fH-7KZ"/>
+                        <outlet property="tableView" destination="w4V-IV-o0J" id="1cd-Fe-Gc6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="127.23214285714285"/>
+        </scene>
+    </scenes>
+</document>
